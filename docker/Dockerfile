@@ -24,7 +24,6 @@ RUN echo "root:123" | chpasswd \
 
 # 暴露端口
 EXPOSE 3389   # Port for xRDP
-# EXPOSE 8888   # Port for http service (uncomment if needed)
 EXPOSE 10086  # Port for rpc send msg
 EXPOSE 10087  # Port for rpc recv msg
 
