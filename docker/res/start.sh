@@ -18,7 +18,7 @@ fi
 # 检查目标目录是否存在
 if [ ! -d "$DIRECTORY" ]; then
     echo "Cloning the repository..."
-    git clone https://github.com/danni-cool/wechatbot-provider-windows.git "$DIRECTORY"
+    git clone https://github.com/Ruk1ng001/wechatbot-provider-windows.git "$DIRECTORY"
 
     # 进入目标目录
     cd "$DIRECTORY" || exit 1
