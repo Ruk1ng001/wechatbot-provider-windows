@@ -23,9 +23,9 @@ RUN echo "root:123" | chpasswd \
         && mkdir -p ~/Desktop
 
 # 暴露端口
-EXPOSE 3389   # Port for xRDP
-EXPOSE 10086  # Port for rpc send msg
-EXPOSE 10087  # Port for rpc recv msg
+EXPOSE 3389
+EXPOSE 10086
+EXPOSE 10087
 
 # 设置入口点和默认命令
 ENTRYPOINT ["./entrypoint.sh"]
