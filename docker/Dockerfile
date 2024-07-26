@@ -18,9 +18,6 @@ RUN dnf update -y \
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
         && echo "Asia/Shanghai" > /etc/timezone
 
-# 复制资源文件
-COPY ./docker/res ./res
-
 # 设置 root 用户密码，并移动资源文件到指定目录
 RUN echo "root:123" | chpasswd \
         && mkdir -p ~/Desktop \
