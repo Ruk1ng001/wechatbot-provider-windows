@@ -15,6 +15,18 @@ if [ ! -f "$PYTHON_EXECUTABLE" ]; then
     exit 1
 fi
 
+WECHAT_DIR=$(find .. -type d -name "WeChat" | head -n 1)
+if [ -z "$WECHAT_DIR" ]; then
+    echo "WeChat directory not found in any directory matching WeChat"
+    exit 1
+fi
+
+WECHAT_EXECUTABLE=$(realpath "$WECHAT_DIR/python.exe")
+if [ ! -f "$WECHAT_EXECUTABLE" ]; then
+    echo "WeChat executable not found at $WECHAT_EXECUTABLE"
+    exit 1
+fi
+
 # 检查目标目录是否存在
 if [ ! -d "$DIRECTORY" ]; then
     echo "Cloning the repository..."
@@ -43,3 +55,5 @@ git pull
 # 运行 windows.bat
 echo "Running windows.bat..."
 wine windows.bat
+
+wine $WECHAT_EXECUTABLE
