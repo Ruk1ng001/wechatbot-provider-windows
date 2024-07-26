@@ -20,9 +20,7 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 
 # 设置 root 用户密码，并移动资源文件到指定目录
 RUN echo "root:123" | chpasswd \
-        && mkdir -p ~/Desktop \
-        && mv res/*.desktop ~/Desktop \
-        && mv res/*.sh .
+        && mkdir -p ~/Desktop
 
 # 暴露端口
 EXPOSE 3389   # Port for xRDP
