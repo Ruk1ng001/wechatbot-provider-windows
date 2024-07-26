@@ -5,7 +5,7 @@ LABEL describe="Fedora for WeChat hook, base on LXDE, Wine, xRDP, WeChatFerry."
 # 设置工作目录
 WORKDIR /root
 
-COPY res/entrypoint.sh ./
+COPY ./docker/res/entrypoint.sh ./
 
 # 更新系统并安装必要的软件包
 RUN dnf update -y \
