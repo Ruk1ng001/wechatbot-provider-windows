@@ -28,7 +28,7 @@ jobs:
           context: .
           file: ./docker/Dockerfile
           push: true
-          tags: ruk1ng/wechatbot-provider-windows:latest
+          tags: ruk1ng/wechatbot-provider-windows:1
           platforms: linux/amd64
           cache-from: type=gha
           cache-to: type=gha,mode=max
