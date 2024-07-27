@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=2.WeChatSetup
 Type=Application
-Exec=lxterminal --command "wine /root/res/install/WeChatSetup-*.exe"
+Exec=lxterminal --command "wine /root/Desktop/install/WeChatSetup-*.exe"
 StartupNotify=true
-Path=/root/res
+Path=/root/Desktop
 Icon=E03C_WeChat.0
