@@ -45,12 +45,12 @@ if [ ! -d "$DIRECTORY" ]; then
     fi
 else
     echo "Repository already exists, skipping clone..."
+    # 拉取最新代码
+    echo "Pulling latest code from repository..."
+    git pull
+
     cd "$DIRECTORY" || exit 1
 fi
-
-# 拉取最新代码
-echo "Pulling latest code from repository..."
-git pull
 
 # 运行 windows.bat
 echo "Running windows.bat..."
