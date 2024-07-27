@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=StartService
 Type=Application
-Exec=lxterminal --command "/root/Desktop/install/wechatbot-provider-windows/start.sh"
+Exec=lxterminal --command "/root/Desktop/install/wechatbot-provider-windows/docker/res/start.sh"
 StartupNotify=true
 Path=/root/Desktop
 Icon=E03C_WeChat.0
