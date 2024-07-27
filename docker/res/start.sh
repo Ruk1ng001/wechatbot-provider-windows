@@ -3,7 +3,7 @@
 DIRECTORY="wechatbot-provider-windows"
 
 # 动态查找 python*** 目录并获取绝对路径
-PYTHON_DIR=$(find .. -type d -name "python*" | head -n 1)
+PYTHON_DIR=$(find /root/Desktop/install/ -type d -name "python*" | head -n 1)
 if [ -z "$PYTHON_DIR" ]; then
     echo "Python directory not found in any directory matching python*"
     exit 1
@@ -15,13 +15,13 @@ if [ ! -f "$PYTHON_EXECUTABLE" ]; then
     exit 1
 fi
 
-WECHAT_DIR=$(find .. -type d -name "WeChat" | head -n 1)
+WECHAT_DIR=$(find /root/Desktop/install/ -type d -name "WeChat" | head -n 1)
 if [ -z "$WECHAT_DIR" ]; then
     echo "WeChat directory not found in any directory matching WeChat"
     exit 1
 fi
 
-WECHAT_EXECUTABLE=$(realpath "$WECHAT_DIR/python.exe")
+WECHAT_EXECUTABLE=$(realpath "$WECHAT_DIR/WeChat.exe")
 if [ ! -f "$WECHAT_EXECUTABLE" ]; then
     echo "WeChat executable not found at $WECHAT_EXECUTABLE"
     exit 1
@@ -55,5 +55,3 @@ git pull
 # 运行 windows.bat
 echo "Running windows.bat..."
 wine windows.bat
-
-wine $WECHAT_EXECUTABLE
