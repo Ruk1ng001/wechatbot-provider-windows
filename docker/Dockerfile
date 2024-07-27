@@ -1,5 +1,5 @@
 # 使用 Fedora 39 作为基础镜像
-FROM fedora:39
+FROM fedora:40
 LABEL describe="Fedora for WeChat hook, base on LXDE, Wine, xRDP, WeChatFerry."
 
 # 设置工作目录
