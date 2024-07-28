@@ -10,6 +10,7 @@ COPY ./docker/res/entrypoint.sh ./
 # 更新系统并安装必要的软件包
 RUN dnf update -y \
         && dnf groupinstall -y "LXDE" \
+        && dnf install -y xorg-x11-server-Xvfb \
         && dnf install -y wine \
         && dnf install -y xrdp \
         && dnf install -y git \
